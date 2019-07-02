@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: guestbook-app-deployment
   labels:
-    app: demo-guestbook-app
+    app: guestbook-app
 spec:
   replicas: 3
   selector:
     matchLabels:
       name: guestbook-app-pod
-      app: demo-guestbook-app
+      app: guestbook-app
   template:
     metadata:
       name: guestbook-app-pod
       labels:
         name: guestbook-app-pod
-        app: demo-guestbook-app
+        app: guestbook-app
     spec:
       containers:
         - name: guestbook-app

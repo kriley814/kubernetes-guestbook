@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: redis-deployment
+  name: redis
   labels:
-    app: demo-guestbook-app
+    app: guestbook-app
 spec:
   replicas: 1
   selector:
     matchLabels:
       name: redis-pod
-      app: demo-guestbook-app
+      app: guestbook-app
   template:
     metadata:
       name: redis-pod
       labels:
         name: redis-pod
-        app: demo-guestbook-app
+        app: guestbook-app
     spec:
       containers:
         - name: redis
