@@ -23,6 +23,6 @@ spec:
         image: gcr.io/google_samples/gb-redisslave:v3
         env:
         - name: GET_HOSTS_FROM
-          value: dns
+          value: env
         ports:
         - containerPort: 6379
